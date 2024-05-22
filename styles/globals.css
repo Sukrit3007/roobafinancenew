@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html{
+  font-family: var(--my-font-family, --vertical-font),sans-serif;
+}
+
+
+
+.embla {
+    overflow: hidden;
+  }
+  .embla__container {
+    display: flex;
+    gap: 16px;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    border: 2px;
+    border: solid red;
+  }
+  .embla__slide {
+    flex: 0 0 100%;
+    min-width: 0;
+  }
+
+  .embla2 {
+    overflow: hidden;
+  }
+  .embla2__container {
+    display: flex;
+    gap: 16px;
+  }
+  .embla2__slide {
+    flex: 1 0 30%;
+    min-width: 0;
+  }
+  
+  @keyframes grow-shrink {
+    0%, 100% {
+      width: 100%;
+    }
+    50% {
+      width: 50%;
+    }
+  }
+  
+  .animate-grow-shrink {
+    animation: grow-shrink 2s infinite;
+  }
+  
