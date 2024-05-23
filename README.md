@@ -16,11 +16,11 @@
 ## How to Use
 
 ```bash
-git clone https://github.com/Sukrit3007/roobafinance.git
+git clone https://github.com/Sukrit3007/roobafinancenew.git
 ```
 
 ```bash
-cd roobafinance
+cd roobafinancenew
 ```
 
 ### Install dependencies
