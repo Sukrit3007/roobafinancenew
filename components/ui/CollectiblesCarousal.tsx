@@ -20,8 +20,8 @@ import {Chip} from "@nextui-org/chip";
 
 const CollectiblesCarousal = () => {
   return (
-    <div className='flex flex-col gap-2'>
-      <h1>
+    <div className='flex flex-col gap-4 w-full'>
+      <h1 className='text-semibold text-center'>
         Collectibles
       </h1>
       <Swiper

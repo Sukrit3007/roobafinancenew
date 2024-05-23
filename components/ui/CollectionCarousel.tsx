@@ -24,14 +24,28 @@ const CollectionCarousal = () => {
     { src: "https://utfs.io/f/65f2b79e-3969-444f-96f9-81e2f830a010-p8zqyk.png", width: 564, height: 846 },
   ];
   return (
-    <div className='h-full relative'>
+    <div className='h-fit relative'>
       <Swiper
-        slidesPerView={3}
+        slidesPerView={1}
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
           delay: 1200,
           disableOnInteraction: false,
+        }}
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
         }}
         modules={[Autoplay]}
         className="mySwiper "
@@ -40,7 +54,7 @@ const CollectionCarousal = () => {
           <SwiperSlide key={index} className=''>
             <Event image={image} />
           </SwiperSlide>
-        ))}
+        ))}s
       </Swiper>
     </div>
   )
@@ -71,7 +85,7 @@ function Event({ image }: any) {
 }
 
 export const OtherInfo = () => (
-  <div className='flex flex-col gap-2 text-black'>
+  <div className='flex flex-col gap-2 flex-nowrap text-black'>
     <h1 className='font-bold text-4xl'>Lunar Palace:</h1>
     <div className='w-fit flex items-center justify-center font-semibold text-xl '>
       <p>{"(ft. Kanye west)"}</p>

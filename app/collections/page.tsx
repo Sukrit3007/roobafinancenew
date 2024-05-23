@@ -12,7 +12,7 @@ const page = () => {
 					COLL<br />ECTI<br />BLE
 				</h1>
 			</div>
-			<div className="absolute bottom-0 left-0 z-10 h-[80vh] w-[65%]">
+			<div className="absolute bottom-0 left-0 z-10  h-[70vh] w-full lg:w-[65%]">
 				<CollectionCarousal/>
 			</div>
 		</div>

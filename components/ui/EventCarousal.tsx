@@ -27,12 +27,26 @@ const EventCarousal = () => {
   return (
     <div className='h-full relative '>
       <Swiper
-        slidesPerView={3}
+        slidesPerView={1}
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
           delay: 1200,
           disableOnInteraction: false,
+        }}
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
         }}
         modules={[Autoplay]}
         className="mySwiper"

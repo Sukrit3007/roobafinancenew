@@ -5,6 +5,9 @@ import Image from 'next/image'
 import React from 'react'
 import { motion } from "framer-motion"
 
+import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
+import { subtitle, title } from './primitives'
+
 const FADE_UP_ANIMATION_VARIANTS = {
   hidden: { opacity: 0, y: 10 },
   show: { opacity: 1, y: 0, transition: { type: "spring" } },
@@ -21,19 +24,24 @@ const EventName = () => (
     }}
     className='h-full w-full flex flex-col gap-6'
   >
-    <motion.h1
-      variants={FADE_UP_ANIMATION_VARIANTS}
-      className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl"
-    >
-      Event Name
-    </motion.h1>
-    <EventDetails />
-    <motion.p
-      variants={FADE_UP_ANIMATION_VARIANTS}
-      className="scroll-m-20 text-lg font-normal tracking-tight"
-    >
-        Lorem ipsum dolor sit amet consectetur. Ac lorem massa in morbi et sed ipsum. Pellentesque mattis condimentum ut nulla.
-    </motion.p>
+    <Card className='max-w-96'>
+      <CardBody className='flex flex-col gap-4'>
+        <motion.h1
+          variants={FADE_UP_ANIMATION_VARIANTS}
+          className={title({ size: 'md', color: 'foreground' })}
+        >
+          Event Name
+        </motion.h1>
+        <EventDetails />
+        <motion.p
+          variants={FADE_UP_ANIMATION_VARIANTS}
+          className=''
+        >
+          Lorem ipsum dolor sit amet consectetur. Ac lorem massa in morbi et sed ipsum. Pellentesque mattis condimentum ut nulla.
+        </motion.p>
+      </CardBody>
+    </Card>
+
     <ArtistLineup />
   </motion.div>
 )
@@ -60,22 +68,12 @@ const EventDetails = () => (
 )
 
 const DetailItem = ({ icon, text }: any) => (
-  <div className='w-fit flex flex-row gap-2 items-center justify-center scroll-m-20  pb-2 text-2xl font-semibold tracking-tight first:mt-0'>
+  <div className='w-fit flex flex-row gap-2 items-center justify-center'>
     {icon}
-    <p>{text}</p>
+    <p className={subtitle()}>{text}</p>
   </div>
 )
 
-const EventDescription = () => (
-  <motion.div
-    variants={FADE_UP_ANIMATION_VARIANTS}
-    className='max-w-[70%]'
-  >
-    <p className='font-semibold text-sm lg:text-base'>
-      Lorem ipsum dolor sit amet consectetur. Ac lorem massa in morbi et sed ipsum. Pellentesque mattis condimentum ut nulla.
-    </p>
-  </motion.div>
-)
 
 const ArtistLineup = () => {
   const artists = [
@@ -87,7 +85,7 @@ const ArtistLineup = () => {
   return (
     <motion.div
       variants={FADE_UP_ANIMATION_VARIANTS}
-      className='w-full pr-6'
+      className='max-w-96 pr-6'
     >
       <div className='flex flex-col gap-6'>
         <h1 className='font-bold text-2xl'>Artist Lineup</h1>

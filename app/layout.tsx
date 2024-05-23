@@ -53,18 +53,20 @@ export default function RootLayout({
 			</head>
 			<body
 				className={cn(
-					"min-h-screen  bg-[#FFFF] lexend",
+					"min-h-screen   bg-[#FFFF] lexend",
 					lexend.className
 				)}
 			>
 				<Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-						<div className="h-screen overflow-hidden flex flex-col gap-4 py-6 pl-6 justify-between bg-[#F2F4F7]">
+						<div className="h-screen overflow-x-hidden flex flex-col gap-4 py-6 pl-6 justify-between bg-[#F2F4F7]">
 								<Logo />
 								<div className=" h-full">
 									{children}
 								</div>
-							<Navbar />
-							<div className="hidden lg:inline-block h-full w-[35%] absolute top-0 right-0 z-50">
+							<div className="z-50">
+								<Navbar />
+							</div>
+							<div className="hidden lg:inline-block h-full  absolute top-0 right-0 z-50">
 								<InfoSidebar />
 							</div>
 						</div>
