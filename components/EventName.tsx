@@ -85,7 +85,7 @@ const ArtistLineup = () => {
   return (
     <motion.div
       variants={FADE_UP_ANIMATION_VARIANTS}
-      className='max-w-96 pr-6 border border-red-600'
+      className='max-w-96 pr-6'
     >
       <div className='flex flex-col gap-6'>
         <h1 className='font-bold text-2xl'>Artist Lineup</h1>
