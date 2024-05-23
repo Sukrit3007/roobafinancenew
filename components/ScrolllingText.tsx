@@ -2,7 +2,7 @@ import React from "react";
 
 const ScrolllingText = () => {
   return (
-    <div className="max-h-screen bg-white">
+    <div className="max-h-screen bg-[#F2F4F7]">
       <div
         style={{ writingMode: "vertical-lr" }}
         className="p-6 mx-8 z-50 min-h-screen flex flex-row gap-2 overflow-hidden whitespace-nowrap bg-[#FF4F18] text-black"

@@ -27,7 +27,7 @@ const InfoSidebar = () => {
         animate="show"
         viewport={{ once: true }}
         variants={{ hidden: {}, show: { transition: { staggerChildren: 0.15 } } }}
-        className='relative bg-[#F2F4F7] text-black  min-h-screen w-full py-4 px-4  flex flex-col items-start justify-between gap-16'
+        className='relative bg-[#F2F4F7] overflow-y-auto text-black  min-h-screen w-full py-4 px-4  flex flex-col items-start justify-between gap-16'
       >
         <div className='shrink'>
           <SectionHeading />
