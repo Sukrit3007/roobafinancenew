@@ -5,7 +5,7 @@ import Image from 'next/image'
 import React from 'react'
 import { motion } from "framer-motion"
 
-import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
+import { Card, CardBody, } from "@nextui-org/card";
 import { subtitle, title } from './primitives'
 
 const FADE_UP_ANIMATION_VARIANTS = {
@@ -85,7 +85,7 @@ const ArtistLineup = () => {
   return (
     <motion.div
       variants={FADE_UP_ANIMATION_VARIANTS}
-      className='max-w-96 pr-6'
+      className='max-w-96 pr-6 border border-red-600'
     >
       <div className='flex flex-col gap-6'>
         <h1 className='font-bold text-2xl'>Artist Lineup</h1>

@@ -71,7 +71,7 @@ function Event({ image }: any) {
       className="border-none h-full bg-transparent"
     >
       <Image
-        alt="Woman listing to music"
+        alt="image"
         className="object-cover h-full"
         height={1400}
         src={image}

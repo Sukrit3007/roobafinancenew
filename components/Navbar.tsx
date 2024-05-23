@@ -9,7 +9,7 @@ import { usePathname } from 'next/navigation'
 const Navbar = () => {
     const pathname = usePathname()
     return (
-        <div className='w-full '>
+        <div className='w-full z-50'>
             <div className="w-fit flex space-x-3 bg-[#141517] rounded-full">
                 <Button
                     href="/"

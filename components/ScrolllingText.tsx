@@ -5,7 +5,7 @@ const ScrolllingText = () => {
     <div className="max-h-screen bg-[#F2F4F7]">
       <div
         style={{ writingMode: "vertical-lr" }}
-        className="p-6 mx-8 z-50 min-h-screen flex flex-row gap-2 overflow-hidden whitespace-nowrap bg-[#FF4F18] text-black"
+        className="p-6 mr-8 z-50 min-h-screen flex flex-row gap-2 overflow-hidden whitespace-nowrap bg-[#FF4F18] text-black"
       >
         <div className="animate-marquee flex flex-row gap-4 items-center text-4xl">
           <h1>Event : Oasis Bus tour , JLN Stadium , Delhi </h1>

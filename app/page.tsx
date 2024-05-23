@@ -12,7 +12,7 @@ export default function Home() {
 					EVE<br />NTS <br />
 				</h1>
 			</div>
-			<div className="absolute bottom-0 left-0 z-10  h-[70vh] w-full lg:w-[65%]">
+			<div className="sticky bottom-0 left-0 z-10 h-full w-full lg:w-[75%]">
 				<EventCarousal/>
 			</div>
 		</div>

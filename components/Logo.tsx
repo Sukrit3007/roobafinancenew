@@ -28,18 +28,17 @@ const Logo = () => {
                         <MenuIcon className='size-4'/>
                     </Button>
                 </div>
-                <Modal size='sm' scrollBehavior={'inside'} isOpen={isOpen} placement={'bottom'} onOpenChange={onOpenChange} className='bg-[#F2F4F7]'>
+                <Modal size='sm' scrollBehavior={'inside'} isOpen={isOpen} placement={'bottom-center'} onOpenChange={onOpenChange} className='bg-[#F2F4F7]'>
                     <ModalContent>
                         {(onClose) => (
                             <div>
                                 <ModalHeader className='text-black'>Explore Your First Event</ModalHeader>
                                 <ModalBody>
-                                    {pathname === '/' && <EventName />}
-                                    {pathname === '/collections' && <Metalives />}
-                                    
+                                        {pathname === '/' && <EventName />}
+                                        {pathname === '/collections' && <Metalives />}
                                 </ModalBody>
                                 <ModalFooter>
-                                    <Button color="danger" variant="light" onPress={onClose}>
+                                    <Button color="danger" variant="flat" size='sm' onPress={onClose}>
                                         Close
                                     </Button>
                                 </ModalFooter>

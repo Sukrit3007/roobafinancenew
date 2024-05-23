@@ -24,7 +24,7 @@ const CollectionCarousal = () => {
     { src: "https://utfs.io/f/65f2b79e-3969-444f-96f9-81e2f830a010-p8zqyk.png", width: 564, height: 846 },
   ];
   return (
-    <div className='h-fit relative'>
+    <div className='h-full relative'>
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
@@ -73,8 +73,8 @@ function Event({ image }: any) {
             <OtherInfo/>
         </CardHeader>
       <Image
-        alt="Woman listing to music"
-        className="object-cover h-full"
+        alt="image"
+        className="object-cover h-full w-full"
         height={1400}
         src={image}
         width={600}
