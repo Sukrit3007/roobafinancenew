@@ -20,7 +20,7 @@ const InfoSidebar = () => {
   const pathname = usePathname()
 
   return (
-    <div className='flex flex-row max-h-screen overflow-hidden p-2'>
+    <div className='flex flex-row max-h-screen overflow-hidden '>
       <ScrolllingText />
       <motion.div
         initial="hidden"

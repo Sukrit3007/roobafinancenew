@@ -14,6 +14,7 @@ import {  MenuIcon } from 'lucide-react';
 const Logo = () => {
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
     const pathname = usePathname()
+
     return (
         <div className='flex flex-row items-center justify-between'>
             <div className=' flex flex-row items-center justify-start'>
@@ -27,7 +28,7 @@ const Logo = () => {
                         <MenuIcon className='size-4'/>
                     </Button>
                 </div>
-                <Modal size='sm' isOpen={isOpen} placement={'bottom'} onOpenChange={onOpenChange} className='bg-[#F2F4F7]'>
+                <Modal size='sm' scrollBehavior={'inside'} isOpen={isOpen} placement={'bottom'} onOpenChange={onOpenChange} className='bg-[#F2F4F7]'>
                     <ModalContent>
                         {(onClose) => (
                             <div>
