@@ -57,9 +57,9 @@ export default function RootLayout({
 				)}
 			>
 				<Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-					<div className="max-h-screen h-screen overflow-x-hidden flex flex-col gap-2 py-8 pl-6 justify-between bg-[#F2F4F7]">
+					<div className="max-h-screen h-screen overflow-x-hidden flex flex-col gap-4 py-8 pl-6 justify-between bg-[#F2F4F7]">
 						<Logo />
-						<div className=" h-full">
+						<div className="h-full">
 							{children}
 						</div>
 						<div className="sticky bottom-0 z-50">
