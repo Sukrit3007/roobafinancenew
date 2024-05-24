@@ -16,7 +16,14 @@ import { Autoplay } from 'swiper/modules';
 import Image from 'next/image';
 import { Card, CardHeader } from '@nextui-org/card';
 
+import { motion } from "framer-motion";
+
 const CollectionCarousal = () => {
+  const FADE_UP_ANIMATION_VARIANTS = {
+    hidden: { opacity: 0, y: 10 },
+    show: { opacity: 1, y: 0, transition: { type: 'spring' } },
+  };
+
   const images = [
     { src: "https://utfs.io/f/f6cdd11d-7367-42a6-acd4-e442ea3eab09-1ejmqb.png", width: 563, height: 797 },
     { src: "https://utfs.io/f/b02da483-9fa1-494f-a7da-d05655ce3ec0-ulnr8x.png", width: 564, height: 705 },
@@ -24,7 +31,13 @@ const CollectionCarousal = () => {
     { src: "https://utfs.io/f/65f2b79e-3969-444f-96f9-81e2f830a010-p8zqyk.png", width: 564, height: 846 },
   ];
   return (
-    <div className='h-full relative'>
+    <motion.div
+      initial="hidden"
+      animate="show"
+      viewport={{ once: true }}
+      variants={FADE_UP_ANIMATION_VARIANTS}
+      className='h-full relative '
+    >
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
@@ -56,7 +69,7 @@ const CollectionCarousal = () => {
           </SwiperSlide>
         ))}s
       </Swiper>
-    </div>
+    </motion.div>
   )
 }
 
@@ -67,11 +80,11 @@ function Event({ image }: any) {
     <Card
       isFooterBlurred
       radius="lg"
-      className="border-none h-full bg-white/20 backdrop-blur-sm"
+      className="border-none h-[90%] bg-white/20 backdrop-blur-sm"
     >
-        <CardHeader>
-            <OtherInfo/>
-        </CardHeader>
+      <CardHeader>
+        <OtherInfo />
+      </CardHeader>
       <Image
         alt="image"
         className="object-cover h-full w-full"

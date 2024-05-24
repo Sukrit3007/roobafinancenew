@@ -18,6 +18,7 @@ import {
 import { ButtonAndQr, SectionHeading } from './InfoSidebar';
 
 
+
 const Logo = () => {
     const pathname = usePathname()
 

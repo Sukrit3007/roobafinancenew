@@ -17,7 +17,14 @@ import Image from 'next/image';
 import { MapPin } from 'lucide-react';
 import { Card, CardFooter } from '@nextui-org/card';
 
+import { motion } from "framer-motion";
+
 const EventCarousal = () => {
+  const FADE_UP_ANIMATION_VARIANTS = {
+    hidden: { opacity: 0, y: 10 },
+    show: { opacity: 1, y: 0, transition: { type: 'spring' } },
+  };
+
   const images = [
     { src: "https://utfs.io/f/a49d8d74-be41-4755-8997-da3c4551bf7f-ulnr8y.png", width: 563, height: 797 },
     { src: "https://utfs.io/f/b02da483-9fa1-494f-a7da-d05655ce3ec0-ulnr8x.png", width: 564, height: 705 },
@@ -25,7 +32,13 @@ const EventCarousal = () => {
     { src: "https://utfs.io/f/65f2b79e-3969-444f-96f9-81e2f830a010-p8zqyk.png", width: 564, height: 846 },
   ];
   return (
-    <div className='h-full relative '>
+    <motion.div 
+      initial="hidden"
+      animate="show"
+      viewport={{ once: true }}
+      variants={FADE_UP_ANIMATION_VARIANTS}
+      className='h-full relative '
+    >
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
@@ -57,7 +70,7 @@ const EventCarousal = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-    </div>
+    </motion.div>
   )
 }
 
@@ -68,7 +81,7 @@ function Event({ image }: any) {
     <Card
       isFooterBlurred
       radius="lg"
-      className="border-none h-full bg-transparent"
+      className="border-none h-[90%] bg-transparent"
     >
       <Image
         alt="image"
