@@ -10,7 +10,7 @@ const Navbar = () => {
     const pathname = usePathname()
     return (
         <div className='w-full z-50'>
-            <div className="w-fit flex space-x-3 bg-[#F2F47]  border border-[#FF4F18] backdrop-blur-md rounded-full">
+            <div className="w-fit flex space-x-3 bg-[#FF4F18]/10  border border-[#FF4F18] backdrop-blur-md rounded-full">
                 <Button
                     href="/"
                     as={Link}
