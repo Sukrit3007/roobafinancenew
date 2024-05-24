@@ -81,7 +81,7 @@ function Event({ image }: any) {
     <Card
       isFooterBlurred
       radius="lg"
-      className="border-none h-[90%] bg-transparent"
+      className="border-none h-full bg-transparent"
     >
       <Image
         alt="image"
