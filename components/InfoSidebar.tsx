@@ -29,13 +29,13 @@ const InfoSidebar = () => {
         variants={{ hidden: {}, show: { transition: { staggerChildren: 0.15 } } }}
         className='relative bg-[#F2F4F7] overflow-y-auto text-black  min-h-screen w-full py-4 px-4  flex flex-col items-start justify-between gap-16'
       >
-        <div className='shrink'>
+        <div className='h-[10vh]'>
           <SectionHeading />
         </div>
-        <div className='shrink'>
+        <div className='h-[70vh]'>
           <ContentSection path={pathname} />
         </div>
-        <div className='w-full' >
+        <div className='h-[20vh] w-full' >
           <BottomSection path={pathname} />
         </div>
       </motion.div>
@@ -69,7 +69,7 @@ const BottomSection = ({ path }: any) => (
 );
 
 export const ButtonAndQr = ({ path }: any) => (
-  <div className='flex flex-row flex-wrap gap-4 items-end justify-between 0'>
+  <div className='flex flex-row flex-wrap gap-4 items-end justify-between m-4'>
     <div>
       {path === '/' && <QrCodeImage />}
     </div>
