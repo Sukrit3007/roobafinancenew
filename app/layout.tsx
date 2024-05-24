@@ -6,7 +6,6 @@ import { Providers } from "./providers";
 import { cn } from "@/lib/utils";
 import { Analytics } from "@vercel/analytics/react"
 import InfoSidebar from "@/components/InfoSidebar";
-import ScrolllingText from "@/components/ScrolllingText";
 import Logo from "@/components/Logo";
 import Navbar from "@/components/Navbar";
 
@@ -58,16 +57,18 @@ export default function RootLayout({
 				)}
 			>
 				<Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-						<div className="max-h-screen h-screen overflow-x-hidden flex flex-col gap-4 py-6 pl-6 justify-between bg-[#F2F4F7]">
-								<Logo />
-								<div className=" h-full ">
-									{children}
-								</div>
-								<Navbar />
-							<div className="hidden lg:inline-block h-full  absolute top-0 right-0 z-50">
-								<InfoSidebar />
-							</div>
+					<div className="max-h-screen h-screen overflow-x-hidden flex flex-col gap-4 py-6 pl-6 justify-between bg-[#F2F4F7]">
+						<Logo />
+						<div className=" h-full">
+							{children}
 						</div>
+						<div className="sticky bottom-0 z-50">
+							<Navbar />
+						</div>
+						<div className="hidden lg:inline-block h-full  absolute top-0 right-0 z-50">
+							<InfoSidebar />
+						</div>
+					</div>
 					<Analytics />
 				</Providers>
 			</body>

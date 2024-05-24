@@ -45,7 +45,7 @@ const InfoSidebar = () => {
 
 export default InfoSidebar;
 
-const SectionHeading = () => (
+export const SectionHeading = () => (
   <motion.div variants={FADE_UP_ANIMATION_VARIANTS}
   className='max-w-96'
   >
@@ -55,7 +55,7 @@ const SectionHeading = () => (
   </motion.div>
 );
 
-const ContentSection = ({ path }: any) => (
+export const ContentSection = ({ path }: any) => (
   <motion.div variants={FADE_UP_ANIMATION_VARIANTS} className='flex items-center' style={{ flex: '2 1 auto' }}>
     {path === '/' && <EventName />}
     {path === '/collections' && <MetaLives />}
@@ -68,7 +68,7 @@ const BottomSection = ({ path }: any) => (
   </motion.div>
 );
 
-const ButtonAndQr = ({ path }: any) => (
+export const ButtonAndQr = ({ path }: any) => (
   <div className='flex flex-row flex-wrap gap-4 items-end justify-between 0'>
     <div>
       {path === '/' && <QrCodeImage />}

@@ -3,7 +3,7 @@ import EventCarousal from "@/components/ui/EventCarousal";
 
 export default function Home() {
 	return (
-		<div className="relative h-full">
+		<div className="sticky top-0 h-full">
 			<div className="absolute top-0 flex flex-col justify-center gap-12 text-[#141517]">
 				<h1 className='font-bold leading-none text-7xl md:text-[7vw] opacity-25'>
 					ASTR<br />IX

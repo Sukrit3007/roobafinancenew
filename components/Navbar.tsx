@@ -10,18 +10,18 @@ const Navbar = () => {
     const pathname = usePathname()
     return (
         <div className='w-full z-50'>
-            <div className="w-fit flex space-x-3 bg-[#141517] rounded-full">
+            <div className="w-fit flex space-x-3 bg-[#F2F47]  border border-[#FF4F18] backdrop-blur-md rounded-full">
                 <Button
                     href="/"
                     as={Link}
-                    className={`px-4 py-2 rounded-full ${pathname === '/' ? 'bg-[#FF4F18] text-white' : 'bg-[#141517] text-gray-400'}`}
+                    className={`px-4 py-2 rounded-full ${pathname === '/' ? 'bg-[#FF4F18] text-white' : 'bg-[#F2F47] text-gray-600'}`}
                 >
                     Event
                 </Button>
                 <Button
                     href="/collections"
                     as={Link}
-                    className={`px-4 py-2 rounded-full ${pathname === '/collections' ? 'bg-[#FF4F18] text-white' : 'bg-[#141517] text-gray-400'}`}
+                    className={`px-4 py-2 rounded-full ${pathname === '/collections' ? 'bg-[#FF4F18] text-white' : 'bg-[#F2F47] text-gray-600'}`}
                 >
                     Collections
                 </Button>

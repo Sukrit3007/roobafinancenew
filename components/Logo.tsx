@@ -2,17 +2,23 @@
 
 import Image from 'next/image'
 import React from 'react'
-
-import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, useDisclosure } from "@nextui-org/modal";
-import { Button } from '@nextui-org/button';
-import { title } from './primitives';
 import { usePathname } from 'next/navigation';
 import EventName from './EventName';
 import Metalives from './MetaLives';
-import {  MenuIcon } from 'lucide-react';
+import { MenuIcon } from 'lucide-react';
+import {
+    Sheet,
+    SheetContent,
+    SheetDescription,
+    SheetFooter,
+    SheetHeader,
+    SheetTitle,
+    SheetTrigger,
+} from "@/components/ui/sheet"
+import { ButtonAndQr, SectionHeading } from './InfoSidebar';
+
 
 const Logo = () => {
-    const { isOpen, onOpen, onOpenChange } = useDisclosure();
     const pathname = usePathname()
 
     return (
@@ -22,31 +28,28 @@ const Logo = () => {
                 <Image src="/Logo.svg" alt='logo' width={180} height={180} className='object-contain' />
             </div>
 
-            <div>
-                <div className='p-4'>
-                    <Button isIconOnly size='sm' radius='full' onPress={onOpen} variant='flat' className='bg-[#FF4F18]'>
-                        <MenuIcon className='size-4'/>
-                    </Button>
-                </div>
-                <Modal size='sm' scrollBehavior={'inside'} isOpen={isOpen} placement={'bottom-center'} onOpenChange={onOpenChange} className='bg-[#F2F4F7]'>
-                    <ModalContent>
-                        {(onClose) => (
-                            <div>
-                                <ModalHeader className='text-black'>Explore Your First Event</ModalHeader>
-                                <ModalBody>
-                                        {pathname === '/' && <EventName />}
-                                        {pathname === '/collections' && <Metalives />}
-                                </ModalBody>
-                                <ModalFooter>
-                                    <Button color="danger" variant="flat" size='sm' onPress={onClose}>
-                                        Close
-                                    </Button>
-                                </ModalFooter>
-                            </div>
-                        )}
-                    </ModalContent>
-                </Modal>
-            </div>
+            <Sheet  >
+                <SheetTrigger>
+                    <MenuIcon className='w-8 h-8 text-black m-6' />
+                </SheetTrigger>
+                <SheetContent className='bg-black/30 backdrop-blur-md border-2 border-black'>
+                    <SheetHeader>
+                        <SheetTitle>
+                            <SectionHeading/>
+                        </SheetTitle>
+                    </SheetHeader>
+                        <div className='py-12 flex items-center justify-center'>
+                        {pathname === '/' && <EventName />}
+                        {pathname === '/collections' && <Metalives />}
+                        </div>
+                    <SheetFooter>
+                        <div className='w-full'>
+                            <ButtonAndQr path={pathname}/>
+                        </div>
+                    </SheetFooter>
+                </SheetContent>
+            </Sheet>
+
 
         </div>
     )
