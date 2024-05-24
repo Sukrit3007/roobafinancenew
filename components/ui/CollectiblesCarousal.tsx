@@ -65,7 +65,7 @@ export default CollectiblesCarousal
 function Collectibles (){
   return(
     <div className='w-full h-full'>
-            <Card className="w-fit py-2 px-2 bg-[#FF4F18] cursor-pointer text-black transition-transform duration-300 ease-in-out hover:scale-95">
+            <Card shadow='none' className="w-fit py-2 px-2 bg-[#FF4F18] cursor-pointer text-black transition-transform duration-300 ease-in-out hover:scale-95">
                 <div className="overflow-visible py-0 flex flex-col gap-2">
                     <div className='flex flex-row items-center justify-between'>
                         <Chip className='bg-black text-[6px] max-h-[10px] max-w-fit'>2024</Chip>

@@ -80,7 +80,8 @@ function Event({ image }: any) {
     <Card
       isFooterBlurred
       radius="lg"
-      className="border-none h-full bg-white/20 backdrop-blur-sm"
+      shadow='none'
+      className="border-none h-full shadow-none  bg-white/20 backdrop-blur-sm transition-transform duration-300 ease-in-out hover:scale-95"
     >
       <CardHeader>
         <OtherInfo />

@@ -58,11 +58,13 @@ export default function RootLayout({
 			>
 				<Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
 					<div className="max-h-screen h-screen overflow-x-hidden flex flex-col gap-4 py-8 pl-6 justify-between bg-[#F2F4F7]">
-						<Logo />
-						<div className="h-full">
+						<div className="h-[10vh]">
+							<Logo />
+						</div>
+						<div className="h-[80vh]">
 							{children}
 						</div>
-						<div className="sticky bottom-0 z-50">
+						<div className="h-[10vh] flex items-center  sticky bottom-0 z-50">
 							<Navbar />
 						</div>
 						<div className="hidden lg:inline-block h-full  absolute top-0 right-0 z-50">
