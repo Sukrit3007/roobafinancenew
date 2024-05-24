@@ -33,7 +33,7 @@ const Logo = () => {
                 <SheetTrigger>
                     <MenuIcon className='w-8 h-8 text-black m-6' />
                 </SheetTrigger>
-                <SheetContent className='bg-black/30 backdrop-blur-md border-2 border-black'>
+                <SheetContent className='overflow-y-auto bg-black/30 backdrop-blur-md border-2 border-black'>
                     <SheetHeader>
                         <SheetTitle>
                             <SectionHeading/>
